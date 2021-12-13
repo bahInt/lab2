@@ -36,7 +36,14 @@ public class AiportWritableComparable implements WritableComparable<AiportWritab
 
     @Override
     public int compareTo(AiportWritableComparable o) {
-        int compareAirportId;
+        int compareAirportId = this.getAirportId().compareTo(
+                o.getAirportId()
+        );
+        if (compareAirportId == 0){
+            return this.getDataIndex().compareTo(
+                    o.getDataIndex()
+            );
+        }
         return compareAirportId;
     }
 }
