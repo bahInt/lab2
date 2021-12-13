@@ -12,7 +12,10 @@ public class AiportWritableComparable implements WritableComparable<AiportWritab
     protected getAirportId(){}
     protected getDataIndex(){}
 
-    public AirportWritableComparable(){}
+    public AirportWritableComparable(IntWritable airportId, IntWritable dataIndex){
+        this.airportId = airportId;
+        
+    }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
