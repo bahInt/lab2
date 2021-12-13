@@ -9,11 +9,16 @@ public class AiportWritableComparable implements WritableComparable<AiportWritab
     private IntWritable airportId;
     private IntWritable dataIndex;
 
-    protected getAirportId(){}
-    protected getDataIndex(){}
+    protected IntWritable getAirportId(){
+        return this.airportId;
+    }
+    protected IntWritable getDataIndex(){
+        return this.dataIndex;
+    }
 
-    public AirportWritableComparable(IntWritable airportId, IntWritable dataIndex){
+    public void AirportWritableComparable(IntWritable airportId, IntWritable dataIndex){
         this.airportId = airportId;
+        this.dataIndex = dataIndex;
 
     }
 
@@ -31,6 +36,6 @@ public class AiportWritableComparable implements WritableComparable<AiportWritab
 
     @Override
     public int compareTo(AiportWritableComparable o) {
-        int compareAirportId =
+        int compareAirportId = 
     }
 }
