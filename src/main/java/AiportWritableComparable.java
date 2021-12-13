@@ -36,6 +36,7 @@ public class AiportWritableComparable implements WritableComparable<AiportWritab
 
     @Override
     public int compareTo(AiportWritableComparable o) {
-        int compareAirportId = 
+        int compareAirportId;
+        return compareAirportId;
     }
 }
