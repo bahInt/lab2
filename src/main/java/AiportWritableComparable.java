@@ -1,6 +1,7 @@
 import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
+import java.io.IOException;
 
 public class AiportWritableComparable implements WritableComparable<AiportWritableComparable> {
     private airportId;
@@ -12,7 +13,10 @@ public class AiportWritableComparable implements WritableComparable<AiportWritab
     public AirportWritableComparable(){}
 
     @Override
-    public void readFields(DataInput dataInput) {}
+    public void readFields(DataInput dataInput) throws IOException {
+        airportId.readFields(dataInput);
+        dataIndex.readFields(dataInput);
+    }
 
     @Override
     public int compareTo(AiportWritableComparable o) {
