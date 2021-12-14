@@ -9,7 +9,7 @@ public class AirportGroupingComparator extends WritableComparator {
     }
 
     @Override
-    public int compare(AirportWritableComparable first, AirportWritableComparable second) {
+    public int compare(WritableComparable first, WritableComparable second) {
         AirportWritableComparable fistAirportID = (AirportWritableComparable) first;
         AirportWritableComparable secondAirportID = (AirportWritableComparable) second;
 
