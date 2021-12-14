@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
     @Override
-    protected void map() throws IOException {
-        
+    protected void map(LongWritable key, Text value) throws IOException {
+
     }
 }
