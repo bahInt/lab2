@@ -1,3 +1,5 @@
+package lab2;
+
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.WritableComparable;
 
