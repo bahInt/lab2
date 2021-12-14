@@ -12,7 +12,9 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
         Iterator<Text> iter = value.iterator();
         Text airportName = new Text(iter.next().toString());
 
-        i
+        if(!iter.hasNext()) {
+            return;
+        }
 
         while(iter.hasNext()) {
             Text call = iter.next();
