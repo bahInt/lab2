@@ -6,8 +6,8 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AirportWritableComparable implements WritableComparable<AirportWritableComparable> {
-    private IntWritable airportId;
-    private IntWritable dataIndex;
+    private final IntWritable airportId;
+    private final IntWritable dataIndex;
 
     protected IntWritable getAirportId(){
         return this.airportId;
