@@ -16,6 +16,7 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
             return;
         }
 
+        
         while(iter.hasNext()) {
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systeminfo.toString());
