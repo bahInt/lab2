@@ -1,4 +1,11 @@
 package lab2;
 
-public static class AirportGroupingComparator {
+import org.apache.hadoop.io.WritableComparator;
+
+public static class AirportGroupingComparator extends WritableComparator {
+    protected  AirportGroupingComparator() {
+        super();
+    }
+
+    public int compare() {}
 }
