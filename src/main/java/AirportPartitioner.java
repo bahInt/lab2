@@ -4,5 +4,5 @@ import org.apache.hadoop.mapreduce.Partitioner;
 public class AirportPartitioner extends Partitioner<AirportWritableComparable, Text> {
 
     @Override
-    public int ge
+    public int getPartition();
 }
