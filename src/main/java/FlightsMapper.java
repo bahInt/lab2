@@ -9,6 +9,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
     private static final int DEST_AIRPORT_ID = 14;
     private static final int DELAY_COLUMN_NUMBER = 18;
     private static final int TABLE_DESCRIPTION = 0;
+    private static final int DATA_INDICATOR = 0;
     private static final String SPLIT_POINT = ",";
 
     @Override
@@ -23,7 +24,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
             context.write(
                     new AirportWritableComparable(
                             new IntWritable(destAirportID),
-                            new IntWritable(DATA_)
+                            new IntWritable(DATA_INDICATOR)
                     ),
                     new Text(destDelay)
             );
