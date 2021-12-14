@@ -20,7 +20,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
         String[] column = line.split(SPLIT_POINT);
         int i = 0;
         while (i < column.length) {
-            Print
+            System.out.println(column[i]);
         }
         String destAirportIDString = column[DEST_AIRPORT_ID];
 
