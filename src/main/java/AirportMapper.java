@@ -1,3 +1,4 @@
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -11,7 +12,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
         if(key.get() != 0){
             String airportCodeId = line[0].replace("\"","");
             context.write(
-                    new AirportWritableComparable()
+                    new AirportWritableComparable(new IntWritable())
 
             );
         }
