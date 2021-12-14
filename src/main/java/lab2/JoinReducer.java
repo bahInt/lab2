@@ -2,7 +2,6 @@ package lab2;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
-
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -33,7 +32,7 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
 
             Text outputKey = new Text("\nAirport Name: " + airportName);
             Text outputValue = new Text("\nMinimal Delay: " + minDelay
-                                    + "\nMaximal Delay: " + maxDelay
+                                    + "\nMaximal Delay:  " + maxDelay
                                     + "\nAverage Delay: " + averageDelay);
             context.write(outputKey, outputValue);
         }
