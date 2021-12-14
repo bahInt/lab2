@@ -16,7 +16,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
                     new AirportWritableComparable(
                             new IntWritable(airportCode),
                             new IntWritable(0) ),
-
+                    
             );
         }
     }

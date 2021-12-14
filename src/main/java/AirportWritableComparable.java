@@ -16,7 +16,7 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
         return this.dataIndex;
     }
 
-    public void AirportWritableComparable(IntWritable airportId, IntWritable dataIndex){
+    public AirportWritableComparable(IntWritable airportId, IntWritable dataIndex){
         this.airportId = airportId;
         this.dataIndex = dataIndex;
 
