@@ -9,7 +9,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] line = value.toString().split(",[\"]");
         if(key.get() != 0){
-            String 
+            String airportCodeId = line[0].replace("\"","");
         }
     }
 }
