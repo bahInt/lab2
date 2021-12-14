@@ -27,6 +27,6 @@ public class JobApp {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
-        
+        System.exit(job.waitForCompletion())
     }
 }
