@@ -7,5 +7,6 @@ public static class AirportGroupingComparator extends WritableComparator {
         super(AirportWritableComparable.class, true);
     }
 
+    @Override
     public int compare() {}
 }
