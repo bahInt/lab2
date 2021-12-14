@@ -10,6 +10,10 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
         String[] line = value.toString().split(",[\"]");
         if(key.get() != 0){
             String airportCodeId = line[0].replace("\"","");
+            context.write(
+                    new AirportWritableComparable()
+
+            );
         }
     }
 }
