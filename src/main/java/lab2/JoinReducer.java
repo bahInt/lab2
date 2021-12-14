@@ -32,7 +32,8 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
             float averageDelay = sumDelays / amountOfValues;
             context.write(
                     new Text("\nAirport Name: " + airportName),
-                    new Text("\nMinimal Delay: ")
+                    new Text("\nMinimal Delay: " + minDelay
+                    + "")
             );
         }
     }
