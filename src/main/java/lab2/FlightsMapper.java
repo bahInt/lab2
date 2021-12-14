@@ -1,3 +1,6 @@
+package lab2;
+
+import lab2.AirportWritableComparable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
