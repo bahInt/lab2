@@ -21,5 +21,7 @@ public class JobApp {
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(AirportPartitioner.class);
         job.setGroupingComparatorClass(AirportGroupingComparator.class);
+        job.setReducerClass(JoinReducer.class);
+        
     }
 }
