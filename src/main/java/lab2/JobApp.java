@@ -1,5 +1,5 @@
 package lab2;
 
 public class JobApp {
-    public static
+    public static void 
 }
