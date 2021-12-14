@@ -12,6 +12,6 @@ public class JobApp {
         Job job = Job.getInstance();
         job.setJarByClass(JobApp.class);
         job.setJobName("Join");
-        MultipleInputs.addInputPath(job, Path(args[0]));
+        MultipleInputs.addInputPath(job, new Path(args[0]));
     }
 }
