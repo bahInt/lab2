@@ -10,7 +10,7 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> value, Context context) throws IOException, InterruptedException {
         Iterator<Text> iter = value.iterator();
-        Text systeminfo = new Text(iter.next);
+        Text = new Text(iter.next);
         while(iter.hasNext()) {
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systeminfo.toString());
