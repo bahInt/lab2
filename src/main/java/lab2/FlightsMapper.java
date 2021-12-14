@@ -11,16 +11,20 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
     private static final int DEST_AIRPORT_ID = 14;
     private static final int DELAY_COLUMN_NUMBER = 18;
     private static final int TABLE_DESCRIPTION = 0;
-    private static final int DATA_INDICATOR = 0;
+    private static final int DATA_INDICATOR = 1;
     private static final String SPLIT_POINT = ",";
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
         String[] column = line.split(SPLIT_POINT);
+        int i = 0;
+        while (i < column.length) {
+            Print
+        }
         String destAirportIDString = column[DEST_AIRPORT_ID];
 
-        if(key.get() != TABLE_DESCRIPTION){
+        if(key.get() > TABLE_DESCRIPTION){
             int destAirportID = Integer.parseInt(destAirportIDString);
             String destDelay = column[DELAY_COLUMN_NUMBER];
             context.write(
