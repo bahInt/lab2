@@ -39,5 +39,5 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
         }
     }
 
-    
+    protected count
 }
