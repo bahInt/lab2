@@ -7,6 +7,8 @@ import java.io.IOException;
 
 public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
     private static final int TABLE_DESCRIPTION = 0;
+    private static final int AIRPORT_CODE_INDEX = 0;
+    private static final int AIRPORT_NAME_INDEX = 1;
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
