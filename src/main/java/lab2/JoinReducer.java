@@ -15,7 +15,7 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
         if(iter.hasNext()) {
             float minDelay = Float.MAX_VALUE;
             float maxDelay = Float.MIN_VALUE;
-            float sum = 0.f;
+            float sumDelays = 0.f;
             int amountOfValues = 0;
             while(iter.hasNext()) {
                 float iterDelay = Float.parseFloat(iter.next().toString());
@@ -26,9 +26,13 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
                 if(maxDelay < iterDelay) {
                     maxDelay = iterDelay;
                 }
-                sum += iterDelay;
+                sumDelays += iterDelay;
                 amountOfValues++;
             }
+            float averageDelay = sumDelays / amountOfValues;
+            context.write(
+                    
+            );
         }
     }
 }
