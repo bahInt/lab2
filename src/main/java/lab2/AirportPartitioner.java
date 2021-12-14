@@ -1,6 +1,5 @@
 package lab2;
 
-import lab2.AirportWritableComparable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
