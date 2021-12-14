@@ -38,8 +38,4 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
             context.write(outputKey, outputValue);
         }
     }
-
-    protected countMinMaxAverageDelay(float minDelay, float maxDelay, float averageDelay) {
-
-    }
 }
