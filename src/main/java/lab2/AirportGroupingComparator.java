@@ -13,6 +13,6 @@ public static class AirportGroupingComparator extends WritableComparator {
         AirportWritableComparable fistAirportID = (AirportWritableComparable) first;
         AirportWritableComparable secondAirportID = (AirportWritableComparable) second;
 
-        return a.getFirst().compareTo(b.getFirst());
+        return ;
     }
 }
