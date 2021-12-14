@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
     private static final int DEST_AIRPORT_ID = 14;
+    private static final int DELAY_COLUMN_NUMBER = 18;
     private static final int TABLE_DESCRIPTION = 0;
 
     @Override
@@ -16,7 +17,13 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
 
         if(key.get() != TABLE_DESCRIPTION){
             int destAirportID = Integer.parseInt(destAirportIDString);
-            String destDelay = column[];
+            String destDelay = column[DELAY_COLUMN_NUMBER];
+            context.write(
+                    new AirportWritableComparable(
+                            
+                    ),
+                    new Text(destDelay)
+            );
         }
     }
 }
