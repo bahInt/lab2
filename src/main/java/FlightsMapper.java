@@ -23,7 +23,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
             context.write(
                     new AirportWritableComparable(
                             new IntWritable(destAirportID),
-                            new IntWritable(1)
+                            new IntWritable(DATA_)
                     ),
                     new Text(destDelay)
             );
