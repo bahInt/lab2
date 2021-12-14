@@ -1,8 +1,8 @@
 package lab2;
 
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 
 public class JobApp {
     public static void main(String[] args) throws Exception {
