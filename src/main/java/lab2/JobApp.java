@@ -15,5 +15,6 @@ public class JobApp {
         job.setJarByClass(JobApp.class);
         job.setJobName("Join");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, FlightsMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, FlightsMapper.class);
     }
 }
