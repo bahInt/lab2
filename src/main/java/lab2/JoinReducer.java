@@ -33,7 +33,7 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
             context.write(
                     new Text("\nAirport Name: " + airportName),
                     new Text("\nMinimal Delay: " + minDelay
-                    + "")
+                    + "\nMaximal Dela")
             );
         }
     }
