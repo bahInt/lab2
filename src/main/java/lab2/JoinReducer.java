@@ -11,6 +11,9 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
     protected void reduce(AirportWritableComparable key, Iterable<Text> value, Context context) throws IOException, InterruptedException {
         Iterator<Text> iter = value.iterator();
         Text airportName = new Text(iter.next().toString());
+
+        i
+
         while(iter.hasNext()) {
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systeminfo.toString());
