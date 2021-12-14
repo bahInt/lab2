@@ -1,4 +1,4 @@
 package lab2;
 
-public class JoinReducer {
+public class JoinReducer extends Reducer<>{
 }
