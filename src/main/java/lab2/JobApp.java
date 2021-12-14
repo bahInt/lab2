@@ -10,5 +10,6 @@ public class JobApp {
         }
         Job job = Job.getInstance();
         job.setJarByClass(JobApp.class);
+        
     }
 }
