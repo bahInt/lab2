@@ -12,11 +12,12 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
         if(key.get() != 0){
             String airportCodeId = line[0].replace("\"","");
             int airportCode = Integer.parseInt(airportCodeId);
+            String airportName = line[1].replace("\"","");
             context.write(
                     new AirportWritableComparable(
                             new IntWritable(airportCode),
                             new IntWritable(0) ),
-                    
+                    new Text(airportName)
             );
         }
     }
