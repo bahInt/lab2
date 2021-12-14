@@ -23,5 +23,6 @@ public class JobApp {
         job.setGroupingComparatorClass(AirportGroupingComparator.class);
         job.setReducerClass(JoinReducer.class);
         job.setMapOutputKeyClass(AirportWritableComparable.class);
+        job.setOutputKeyClass(Text.class);
     }
 }
