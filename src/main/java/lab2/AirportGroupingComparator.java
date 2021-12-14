@@ -9,5 +9,7 @@ public static class AirportGroupingComparator extends WritableComparator {
     }
 
     @Override
-    public int compare(AirportWritableComparable a1, AirportWritableComparable b1) {}
+    public int compare(AirportWritableComparable a1, AirportWritableComparable b1) {
+        
+    }
 }
