@@ -13,7 +13,8 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
         Text airportName = new Text(iter.next().toString());
 
         if(iter.hasNext()) {
-            float 
+            float minDelay;
+            float maxDelay
 
             while(iter.hasNext()) {
                 Text call = iter.next();
