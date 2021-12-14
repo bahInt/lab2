@@ -19,7 +19,8 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
 
             while(iter.hasNext()) {
 
-                float iterFlightDelay = 
+                float iterFlightDelay = Float.parseFloat(iter.next().toString());
+                
 
             }
         }
