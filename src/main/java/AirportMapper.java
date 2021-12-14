@@ -6,10 +6,12 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
+    private static final int TABLE_DESCRIPTION = 0;
+
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] line = value.toString().split(",[\"]");
-        if(key.get() != 0){
+        if(key.get() != TABLE_DESCRIPTION){
             String airportCodeId = line[0].replace("\"","");
             int airportCode = Integer.parseInt(airportCodeId);
             String airportName = line[1].replace("\"","");
