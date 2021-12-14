@@ -1,5 +1,6 @@
 package lab2;
 
+import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
 
 public static class AirportGroupingComparator extends WritableComparator {
@@ -8,5 +9,5 @@ public static class AirportGroupingComparator extends WritableComparator {
     }
 
     @Override
-    public int compare() {}
+    public int compare(AirportWritableComparable a1, AirportWritableComparable b1) {}
 }
