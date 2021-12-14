@@ -1,2 +1,4 @@
-package lab2;public class JobApp {
+package lab2;
+
+public class JobApp {
 }
