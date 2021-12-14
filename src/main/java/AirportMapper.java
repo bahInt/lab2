@@ -14,13 +14,13 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] line = value.toString().split(",[\"]");
         if(key.get() != TABLE_DESCRIPTION){
-            String airportCodeId = line[0].replace("\"","");
+            String airportCodeId = line[AIRPORT_CODE_INDEX].replace("\"","");
             int airportCode = Integer.parseInt(airportCodeId);
-            String airportName = line[1].replace("\"","");
+            String airportName = line[AIRPORT_NAME_INDEX].replace("\"","");
             context.write(
                     new AirportWritableComparable(
                             new IntWritable(airportCode),
-                            new IntWritable(0) ),
+                            new IntWritable(AIRPORT_CODE_INDEX) ),
                     new Text(airportName)
             );
         }
