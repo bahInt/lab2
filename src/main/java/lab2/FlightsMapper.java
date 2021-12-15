@@ -18,15 +18,12 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
         String[] column = line.split(SPLIT_POINT);
-        int i = 0;
-        while (i < column.length) {
-            System.out.println(column[i]);
-        }
         String destAirportIDString = column[DEST_AIRPORT_ID];
 
         if(key.get() > TABLE_DESCRIPTION){
             int destAirportID = Integer.parseInt(destAirportIDString);
             String destDelay = column[DELAY_COLUMN_NUMBER];
+            if
             context.write(
                     new AirportWritableComparable(
                             new IntWritable(destAirportID),
