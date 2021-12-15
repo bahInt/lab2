@@ -26,6 +26,7 @@ public class JoinReducer extends Reducer<AirportWritableComparable, Text, Text, 
                     if(maxDelay < iterDelay) {
                         maxDelay = iterDelay;
                     }
+                    
                     sumDelays += iterDelay;
                     amountOfValues++;
                 }
