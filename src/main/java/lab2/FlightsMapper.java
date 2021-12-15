@@ -23,7 +23,7 @@ public class FlightsMapper extends Mapper<LongWritable, Text, AirportWritableCom
         if(key.get() > TABLE_DESCRIPTION){
             int destAirportID = Integer.parseInt(destAirportIDString);
             String destDelay = column[DELAY_COLUMN_NUMBER];
-            if(destDelay)
+            if(!destDelay.E)
             context.write(
                     new AirportWritableComparable(
                             new IntWritable(destAirportID),
